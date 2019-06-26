@@ -22,4 +22,17 @@ function listHeatLevels(heatLevels) {
     })
 }
 
-export {makeMenuItemComponent, listMenuItems, makeHeatLevelComponent, listHeatLevels }
+function buildForm() {
+    return `
+    <ul id="menu-list"></ul>
+    <ul id="heat-list"></ul>
+    <input type="text" id="name-input" placeholder="Your Name">
+    <button id="order-btn">Place Order</button>
+    `
+}
+
+function addFormToDOM(form) {
+    document.querySelector("#container").innerHTML += form
+}
+
+export { makeMenuItemComponent, listMenuItems, makeHeatLevelComponent, listHeatLevels, buildForm, addFormToDOM }

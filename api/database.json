@@ -46,21 +46,21 @@
   ],
   "orders": [
     {
-      "menu_item_id": "3",
-      "heat_level_id": null,
-      "user": null,
+      "menu_itemId": 5,
+      "heat_levelId": 1,
+      "user": "Rumsey",
       "id": 1
     },
     {
-      "menu_item_id": "3",
-      "heat_level_id": "4",
-      "user": null,
+      "menu_itemId": 3,
+      "heat_levelId": 4,
+      "user": "Fred",
       "id": 2
     },
     {
-      "menu_item_id": "5",
-      "heat_level_id": "1",
-      "user": "Rumsey",
+      "menu_itemId": 1,
+      "heat_levelId": 2,
+      "user": "Tom",
       "id": 3
     }
   ]

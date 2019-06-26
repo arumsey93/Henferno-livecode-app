@@ -1,8 +1,12 @@
-import {getMenuItems, getHeatLevels} from "./api.js"
-import {makeMenuItemComponent, listMenuItems, makeHeatLevelComponent, listHeatLevels} from "./domstuff.js"
-import "./form.js"
+import {getData} from "./api.js"
+import {makeMenuItemComponent, listMenuItems, makeHeatLevelComponent, listHeatLevels, buildForm, addFormToDOM} from "./domstuff.js"
+import {initializeOrderListener} from "./form.js"
+import "./order_list.js"
 
-getMenuItems()
+addFormToDOM(buildForm())
+initializeOrderListener()
+
+getData("menu_items")
 .then (menuItems => {
     // loop thru menu items, and turn them into html components
     let componentArray = menuItems.map( (oneMenuItemObj) =>{
@@ -12,7 +16,7 @@ getMenuItems()
     listMenuItems(componentArray)
 })
 
-getHeatLevels()
+getData("heat_levels")
 .then (heatData => {
     let heatArray = heatData.map( (oneHeatObj) => {
         return makeHeatLevelComponent(oneHeatObj)

@@ -1,4 +1,6 @@
 import {addOrder} from "./api.js"
+
+function initializeOrderListener() {
 let orderBtn = document.querySelector("#order-btn")
 orderBtn.addEventListener("click", () => {
     //Grab the values from form inputs
@@ -10,14 +12,14 @@ orderBtn.addEventListener("click", () => {
     for (let i = 0; i < menuBtns.length; i++) {
         if(menuBtns[i].checked) {
             console.log(menuBtns[i].value)
-            selectedMenuItemID = menuBtns[i].value
+            selectedMenuItemID = parseInt(menuBtns[i].value)
         }
     }
     let heatBtns = document.getElementsByName("heat")
     for (let i = 0; i < heatBtns.length; i++) {
         if(heatBtns[i].checked) {
             console.log(heatBtns[i].value)
-            selectedHeatLevelID = heatBtns[i].value
+            selectedHeatLevelID = parseInt(heatBtns[i].value)
         }
     }
 
@@ -25,6 +27,7 @@ orderBtn.addEventListener("click", () => {
     let newOrder = orderFactory(userName, selectedMenuItemID, selectedHeatLevelID)
     addOrder(newOrder)
 })
+}
 
 function orderFactory(user, menuId, heatId) {
     return {
@@ -33,3 +36,5 @@ function orderFactory(user, menuId, heatId) {
         user: user
     }
 }
+
+export { initializeOrderListener }
