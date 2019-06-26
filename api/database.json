@@ -1,50 +1,67 @@
 {
   "menu_items": [
-      {
-          "id": 1,
-          "name": "Tenders Basket",
-          "price": "$9.99"
-      },
-      {
-          "id": 2,
-          "name": "Half-Chicken",
-          "price": "$11.50"
-      },
-      {
-          "id": 3,
-          "name": "Thunder Thigh",
-          "price": "$8.00"
-      },
-      {
-          "id": 4,
-          "name": "Wings Basket",
-          "price": "$10.00"
-      },
-      {
-          "id": 5,
-          "name": "Chicken Sandwich",
-          "price": "$8.50"
-      }
+    {
+      "id": 1,
+      "name": "Tenders Basket",
+      "price": "$9.99"
+    },
+    {
+      "id": 2,
+      "name": "Half-Chicken",
+      "price": "$11.50"
+    },
+    {
+      "id": 3,
+      "name": "Thunder Thigh",
+      "price": "$8.00"
+    },
+    {
+      "id": 4,
+      "name": "Wings Basket",
+      "price": "$10.00"
+    },
+    {
+      "id": 5,
+      "name": "Chicken Sandwich",
+      "price": "$8.50"
+    }
   ],
   "heat_levels": [
-      {
-          "id": 1,
-          "name": "wimpy"
-      },
-      {
-          "id": 2,
-          "name": "spicy"
-      },
-      {
-          "id": 3,
-          "name": "crazy"
-      },
-      {
-          "id": 4,
-          "name": "deadly"
-      }
+    {
+      "id": 1,
+      "name": "wimpy"
+    },
+    {
+      "id": 2,
+      "name": "spicy"
+    },
+    {
+      "id": 3,
+      "name": "crazy"
+    },
+    {
+      "id": 4,
+      "name": "deadly"
+    }
   ],
   "orders": [
-
+    {
+      "menu_item_id": "3",
+      "heat_level_id": null,
+      "user": null,
+      "id": 1
+    },
+    {
+      "menu_item_id": "3",
+      "heat_level_id": "4",
+      "user": null,
+      "id": 2
+    },
+    {
+      "menu_item_id": "5",
+      "heat_level_id": "1",
+      "user": "Rumsey",
+      "id": 3
+    }
   ]
 }

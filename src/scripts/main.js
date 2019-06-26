@@ -1,5 +1,6 @@
 import {getMenuItems, getHeatLevels} from "./api.js"
 import {makeMenuItemComponent, listMenuItems, makeHeatLevelComponent, listHeatLevels} from "./domstuff.js"
+import "./form.js"
 
 getMenuItems()
 .then (menuItems => {
