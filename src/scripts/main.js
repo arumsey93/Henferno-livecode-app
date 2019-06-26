@@ -1,5 +1,5 @@
-import {getMenuItems} from "./api.js"
-import {makeMenuItemComponent, listMenuItems} from "./domstuff.js"
+import {getMenuItems, getHeatLevels} from "./api.js"
+import {makeMenuItemComponent, listMenuItems, makeHeatLevelComponent, listHeatLevels} from "./domstuff.js"
 
 getMenuItems()
 .then (menuItems => {
@@ -9,4 +9,12 @@ getMenuItems()
     })
     // add the menu items components to the DOM
     listMenuItems(componentArray)
+})
+
+getHeatLevels()
+.then (heatData => {
+    let heatArray = heatData.map( (oneHeatObj) => {
+        return makeHeatLevelComponent(oneHeatObj)
+})
+    listHeatLevels(heatArray)
 })
